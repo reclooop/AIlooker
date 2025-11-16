@@ -1859,23 +1859,25 @@
             cookiesAccepted = false;
         }
         
-        // Function to load tracking scripts (Google Analytics and AdSense)
+                // Function to load tracking scripts (Google Analytics and AdSense)
         function loadTrackingScripts() {
-            // Code for Google Analytics
+            if (!cookiesAccepted) return;
+            
+            // Google Analytics con tu ID real
             const gaScript = document.createElement('script');
             gaScript.async = true;
-            gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+            gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XR18XSQGHC';
             document.head.appendChild(gaScript);
             
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'GA_MEASUREMENT_ID');
+            gtag('config', 'G-XR18XSQGHC');
             
-            // Code for Google AdSense
+            // Google AdSense (cuando tengas tu ID)
             const adsenseScript = document.createElement('script');
             adsenseScript.async = true;
-            adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXX';
+            adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-TU_ID_DE_ADSENSE';
             adsenseScript.crossOrigin = 'anonymous';
             document.head.appendChild(adsenseScript);
         }
