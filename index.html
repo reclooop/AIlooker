@@ -1805,27 +1805,58 @@
     <!-- Scripts -->
     <script>
         // Show cookie banner after 2 seconds
+                // Cookie Management
+        let cookiesAccepted = null;
+
+        // Show cookie banner after 2 seconds
         setTimeout(() => {
-            document.getElementById('cookieBanner').style.display = 'block';
+            const cookiePreference = localStorage.getItem('cookiesAccepted');
+            if (cookiePreference === null) {
+                document.getElementById('cookieBanner').style.display = 'block';
+            } else {
+                cookiesAccepted = cookiePreference === 'true';
+                if (cookiesAccepted) {
+                    loadTrackingScripts();
+                }
+            }
         }, 2000);
-        
+
         // Handle cookie acceptance
         document.getElementById('acceptCookies').addEventListener('click', function() {
             document.getElementById('cookieBanner').style.display = 'none';
             localStorage.setItem('cookiesAccepted', 'true');
-            // Code to load Google Analytics and AdSense would go here
+            cookiesAccepted = true;
             loadTrackingScripts();
         });
-        
-        // Handle cookie rejection
+
+        // Handle cookie rejection - NOW IT REALLY WORKS
         document.getElementById('rejectCookies').addEventListener('click', function() {
             document.getElementById('cookieBanner').style.display = 'none';
             localStorage.setItem('cookiesAccepted', 'false');
+            cookiesAccepted = false;
+            removeTrackingScripts();
         });
-        
-        // Check if cookies were previously accepted
-        if (localStorage.getItem('cookiesAccepted') === 'true') {
+
+        // Function to remove tracking scripts
+        function removeTrackingScripts() {
+            const gaScripts = document.querySelectorAll('script[src*="googletagmanager"]');
+            gaScripts.forEach(script => script.remove());
+            
+            const adsenseScripts = document.querySelectorAll('script[src*="adsbygoogle"]');
+            adsenseScripts.forEach(script => script.remove());
+            
+            if (window.dataLayer) {
+                window.dataLayer = [];
+            }
+        }
+
+        // Check existing preference on page load
+        const existingPreference = localStorage.getItem('cookiesAccepted');
+        if (existingPreference === 'true') {
+            cookiesAccepted = true;
             loadTrackingScripts();
+        } else if (existingPreference === 'false') {
+            cookiesAccepted = false;
         }
         
         // Function to load tracking scripts (Google Analytics and AdSense)
