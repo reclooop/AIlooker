@@ -789,6 +789,246 @@
                 padding: 30px 20px;
             }
         }
+        /* Student Hacks Accordion Styles */
+.student-hacks-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    margin: 40px 0;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.hacks-main-accordion {
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 30px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.hacks-main-accordion:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.hacks-main-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.hacks-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.hacks-icon.rotated {
+    transform: rotate(180deg);
+}
+
+.hacks-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    background: white;
+}
+
+.hacks-content.expanded {
+    max-height: 5000px;
+}
+
+.hacks-grid {
+    display: grid;
+    gap: 0;
+}
+
+.hack-category {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.hack-category:last-child {
+    border-bottom: none;
+}
+
+.category-header {
+    padding: 20px 30px;
+    background: #f8f9fa;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.category-header:hover {
+    background: #e9ecef;
+}
+
+.category-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--secondary);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.category-icon {
+    font-size: 1.2rem;
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.category-icon.rotated {
+    transform: rotate(180deg);
+}
+
+.category-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.category-content.expanded {
+    max-height: 2000px;
+}
+
+.hack-details {
+    padding: 30px;
+    background: white;
+}
+
+.tool-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 25px 0;
+}
+
+.free-tier, .premium-pick {
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid;
+}
+
+.free-tier {
+    border-left-color: var(--success);
+    background: #f8fff9;
+}
+
+.premium-pick {
+    border-left-color: var(--warning);
+    background: #fffbf0;
+}
+
+.tool-header {
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.tool-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.free-badge {
+    background: var(--success);
+    color: white;
+}
+
+.paid-badge {
+    background: var(--warning);
+    color: white;
+}
+
+.feature-list {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.use-case {
+    background: var(--light);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 4px solid var(--primary);
+}
+
+.use-case h4 {
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.visit-link {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-top: 15px;
+}
+
+.visit-link:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.rating {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+    align-items: center;
+}
+
+.rating-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.stars {
+    color: #f39c12;
+}
+
+@media (max-width: 768px) {
+    .tool-comparison {
+        grid-template-columns: 1fr;
+    }
+    
+    .hacks-main-title {
+        font-size: 1.4rem;
+    }
+    
+    .category-title {
+        font-size: 1.1rem;
+    }
+}
         /* ÍNDICE LATERAL */
         .sidebar-index {
             position: fixed;
@@ -932,7 +1172,509 @@
             </div>
         </div>
     </section>
+    <!-- Student AI Hacks Section -->
+<section class="student-hacks-section fade-in">
+    <div class="container">
+        <button class="hacks-main-accordion" id="mainHacksAccordion">
+            <h2 class="hacks-main-title">
+                <i class="fas fa-graduation-cap" style="margin-right: 15px;"></i>
+                Student AI Hacks: Ultimate Academic Success Toolkit 2025
+            </h2>
+            <i class="fas fa-chevron-down hacks-icon" id="mainHacksIcon"></i>
+        </button>
+        
+        <div class="hacks-content" id="mainHacksContent">
+            <div class="hack-details">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <h3 style="color: var(--secondary); font-size: 1.8rem; margin-bottom: 15px;">
+                        Unlock Your Academic Potential with AI
+                    </h3>
+                    <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text); max-width: 800px; margin: 0 auto;">
+                        Let's be real - modern education demands more than traditional study methods. We've curated the most effective AI tools that serious students are using to excel in their academic journey. From complex mathematical problem-solving to creating stunning presentations, these AI assistants will become your secret weapon for academic success.
+                    </p>
+                </div>
 
+                <div class="hacks-grid">
+                    <!-- Academic Problem Solvers -->
+                    <div class="hack-category">
+                        <div class="category-header" onclick="toggleCategory('mathCategory')">
+                            <h4 class="category-title">
+                                <i class="fas fa-calculator"></i>
+                                Academic Problem Solvers
+                                <i class="fas fa-chevron-down category-icon" id="mathCategoryIcon"></i>
+                            </h4>
+                        </div>
+                        <div class="category-content" id="mathCategory">
+                            <div class="hack-details">
+                                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 25px;">
+                                    Mathematics and complex scientific problems can be incredibly time-consuming. Honestly, spending hours on a single calculus problem isn't the most efficient use of your study time. These AI tools provide step-by-step solutions while ensuring you actually understand the underlying concepts.
+                                </p>
+                                
+                                <div class="tool-comparison">
+                                    <div class="free-tier">
+                                        <div class="tool-header">
+                                            <span class="tool-name">Wolfram Alpha</span>
+                                            <span class="badge free-badge">FREE Tier</span>
+                                        </div>
+                                        <p><strong>Mathematical Computation Powerhouse</strong></p>
+                                        <p>The computational intelligence behind Wolfram Alpha makes it unparalleled for mathematical problem-solving. It doesn't just give answers - it provides comprehensive step-by-step solutions with graphical representations.</p>
+                                        
+                                        <ul class="feature-list">
+                                            <li>Step-by-step solutions for calculus, algebra, and differential equations</li>
+                                            <li>Graphical representations and 3D plotting capabilities</li>
+                                            <li>Unit conversions and scientific calculations</li>
+                                            <li>Statistical analysis and probability computations</li>
+                                        </ul>
+                                        
+                                        <div class="use-case">
+                                            <h4>📚 Perfect For:</h4>
+                                            <p><strong>Calculus Exam Prep:</strong> Stuck on a complex integral? Input the problem and get not just the answer but the complete methodology. "Solve ∫(x²+3x+2)dx from 0 to 5" gives you both the numerical result and the step-by-step integration process.</p>
+                                        </div>
+                                        
+                                        <div class="rating">
+                                            <div class="rating-item">
+                                                <span>Speed:</span>
+                                                <div class="stars">★★★★★</div>
+                                            </div>
+                                            <div class="rating-item">
+                                                <span>Accuracy:</span>
+                                                <div class="stars">★★★★★</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <a href="https://www.wolframalpha.com" class="visit-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-external-link-alt"></i> Visit Wolfram Alpha
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="premium-pick">
+                                        <div class="tool-header">
+                                            <span class="tool-name">ChatGPT Plus</span>
+                                            <span class="badge paid-badge">PREMIUM</span>
+                                        </div>
+                                        <p><strong>Comprehensive Academic Assistant</strong></p>
+                                        <p>While Wolfram excels at computation, ChatGPT Plus provides contextual understanding and can explain mathematical concepts in multiple ways until they click for you.</p>
+                                        
+                                        <ul class="feature-list">
+                                            <li>Conceptual explanations in plain English</li>
+                                            <li>Multiple approaches to problem-solving</li>
+                                            <li>Integration with Advanced Data Analysis for complex computations</li>
+                                            <li>Ability to upload images of mathematical problems</li>
+                                        </ul>
+                                        
+                                        <div class="use-case">
+                                            <h4>🎯 Pro Tip:</h4>
+                                            <p><strong>Physics Problem Sets:</strong> Upload a screenshot of your physics homework and ask: "Explain the concept of torque in this problem and solve it step by step using both the formulaic and conceptual approaches."</p>
+                                        </div>
+                                        
+                                        <div class="rating">
+                                            <div class="rating-item">
+                                                <span>Understanding:</span>
+                                                <div class="stars">★★★★★</div>
+                                            </div>
+                                            <div class="rating-item">
+                                                <span>Versatility:</span>
+                                                <div class="stars">★★★★★</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <a href="https://chat.openai.com" class="visit-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-external-link-alt"></i> Visit ChatGPT
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Writing & Composition -->
+                    <div class="hack-category">
+                        <div class="category-header" onclick="toggleCategory('writingCategory')">
+                            <h4 class="category-title">
+                                <i class="fas fa-pen-fancy"></i>
+                                Writing & Composition Masters
+                                <i class="fas fa-chevron-down category-icon" id="writingCategoryIcon"></i>
+                            </h4>
+                        </div>
+                        <div class="category-content" id="writingCategory">
+                            <div class="hack-details">
+                                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 25px;">
+                                    Let's face it - not everyone is a natural-born writer. These AI writing assistants will help you craft compelling essays, research papers, and creative writing pieces that maintain your unique voice while ensuring academic excellence.
+                                </p>
+                                
+                                <div class="tool-comparison">
+                                    <div class="free-tier">
+                                        <div class="tool-header">
+                                            <span class="tool-name">Grammarly Free</span>
+                                            <span class="badge free-badge">FREE Tier</span>
+                                        </div>
+                                        <p><strong>Essential Writing Polish</strong></p>
+                                        <p>Grammarly's free version provides real-time grammar and spelling corrections that catch mistakes even native speakers miss. It's like having an English professor looking over your shoulder.</p>
+                                        
+                                        <ul class="feature-list">
+                                            <li>Advanced grammar and punctuation correction</li>
+                                            <li>Spelling and contextual spelling checks</li>
+                                            <li>Basic tone detection and suggestions</li>
+                                            <li>Browser extension for universal coverage</li>
+                                        </ul>
+                                        
+                                        <div class="use-case">
+                                            <h4>✍️ Perfect For:</h4>
+                                            <p><strong>Last-Minute Essay Revisions:</strong> Finished your 2000-word essay at 2 AM? Run it through Grammarly to catch those embarrassing typos and grammatical errors before submission.</p>
+                                        </div>
+                                        
+                                        <div class="rating">
+                                            <div class="rating-item">
+                                                <span>Accuracy:</span>
+                                                <div class="stars">★★★★☆</div>
+                                            </div>
+                                            <div class="rating-item">
+                                                <span>Ease of Use:</span>
+                                                <div class="stars">★★★★★</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <a href="https://www.grammarly.com" class="visit-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-external-link-alt"></i> Visit Grammarly
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="premium-pick">
+                                        <div class="tool-header">
+                                            <span class="tool-name">Claude Pro</span>
+                                            <span class="badge paid-badge">PREMIUM</span>
+                                        </div>
+                                        <p><strong>Academic Writing Specialist</strong></p>
+                                        <p>Claude excels at understanding academic context and helping structure complex arguments. Its 400K token context window means it can handle entire research papers while maintaining coherence.</p>
+                                        
+                                        <ul class="feature-list">
+                                            <li>Advanced essay structuring and outlining</li>
+                                            <li>Research paper organization and citation help</li>
+                                            <li>Thesis development and argument strengthening</li>
+                                            <li>Academic tone and style maintenance</li>
+                                        </ul>
+                                        
+                                        <div class="use-case">
+                                            <h4>🎓 Research Paper Hack:</h4>
+                                            <p><strong>Literature Review Assistance:</strong> Upload 5-10 research papers and ask: "Synthesize these papers into a comprehensive literature review focusing on climate change impacts, identifying key themes and research gaps."</p>
+                                        </div>
+                                        
+                                        <div class="rating">
+                                            <div class="rating-item">
+                                                <span>Academic Quality:</span>
+                                                <div class="stars">★★★★★</div>
+                                            </div>
+                                            <div class="rating-item">
+                                                <span>Research Depth:</span>
+                                                <div class="stars">★★★★★</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <a href="https://claude.ai" class="visit-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-external-link-alt"></i> Visit Claude
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Language & Translation -->
+                    <div class="hack-category">
+                        <div class="category-header" onclick="toggleCategory('languageCategory')">
+                            <h4 class="category-title">
+                                <i class="fas fa-language"></i>
+                                Language & Translation Experts
+                                <i class="fas fa-chevron-down category-icon" id="languageCategoryIcon"></i>
+                            </h4>
+                        </div>
+                        <div class="category-content" id="languageCategory">
+                            <div class="hack-details">
+                                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 25px;">
+                                    Whether you're studying foreign languages, dealing with international research, or just need to translate academic materials, these AI tools provide near-human translation quality with academic precision.
+                                </p>
+                                
+                                <div class="tool-comparison">
+                                    <div class="free-tier">
+                                        <div class="tool-header">
+                                            <span class="tool-name">Google Translate</span>
+                                            <span class="badge free-badge">FREE Tier</span>
+                                        </div>
+                                        <p><strong>Universal Translation Workhorse</strong></p>
+                                        <p>Google's neural machine translation has improved dramatically, especially for common languages. The document translation feature is a lifesaver for international students.</p>
+                                        
+                                        <ul class="feature-list">
+                                            <li>130+ language support</li>
+                                            <li>Document translation (PDF, Word, PowerPoint)</li>
+                                            <li>Camera translation for physical documents</li>
+                                            <li>Conversation mode for real-time practice</li>
+                                        </ul>
+                                        
+                                        <div class="use-case">
+                                            <h4>🌍 Perfect For:</h4>
+                                            <p><strong>International Research:</strong> Found a crucial research paper in German? Upload the PDF and get an instant translation that preserves academic terminology and structure.</p>
+                                        </div>
+                                        
+                                        <div class="rating">
+                                            <div class="rating-item">
+                                                <span>Language Coverage:</span>
+                                                <div class="stars">★★★★★</div>
+                                            </div>
+                                            <div class="rating-item">
+                                                <span>Academic Accuracy:</span>
+                                                <div class="stars">★★★☆☆</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <a href="https://translate.google.com" class="visit-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-external-link-alt"></i> Visit Google Translate
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="premium-pick">
+                                        <div class="tool-header">
+                                            <span class="tool-name">DeepL Pro</span>
+                                            <span class="badge paid-badge">PREMIUM</span>
+                                        </div>
+                                        <p><strong>Academic Translation Excellence</strong></p>
+                                        <p>DeepL consistently outperforms other translators for European languages, especially for academic and technical content. It understands context and nuance like no other machine translator.</p>
+                                        
+                                        <ul class="feature-list">
+                                            <li>Superior translation quality for academic texts</li>
+                                            <li>Formal and informal tone options</li>
+                                            <li>Document formatting preservation</li>
+                                            <li>API access for batch translations</li>
+                                        </ul>
+                                        
+                                        <div class="use-case">
+                                            <h4>📄 Research Translation:</h4>
+                                            <p><strong>Thesis Translation:</strong> Need to translate your thesis for an international committee? DeepL maintains academic rigor while ensuring natural flow in the target language.</p>
+                                        </div>
+                                        
+                                        <div class="rating">
+                                            <div class="rating-item">
+                                                <span>Translation Quality:</span>
+                                                <div class="stars">★★★★★</div>
+                                            </div>
+                                            <div class="rating-item">
+                                                <span>Academic Precision:</span>
+                                                <div class="stars">★★★★★</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <a href="https://www.deepl.com" class="visit-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-external-link-alt"></i> Visit DeepL
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Creation -->
+                    <div class="hack-category">
+                        <div class="category-header" onclick="toggleCategory('videoCategory')">
+                            <h4 class="category-title">
+                                <i class="fas fa-video"></i>
+                                Video Creation & Presentation
+                                <i class="fas fa-chevron-down category-icon" id="videoCategoryIcon"></i>
+                            </h4>
+                        </div>
+                        <div class="category-content" id="videoCategory">
+                            <div class="hack-details">
+                                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 25px;">
+                                    Video presentations and creative projects are becoming standard academic requirements. These AI tools transform your ideas into professional-quality videos and presentations in minutes, not hours.
+                                </p>
+                                
+                                <div class="tool-comparison">
+                                    <div class="free-tier">
+                                        <div class="tool-header">
+                                            <span class="tool-name">Canva Free</span>
+                                            <span class="badge free-badge">FREE Tier</span>
+                                        </div>
+                                        <p><strong>Visual Content Powerhouse</strong></p>
+                                        <p>Canva's AI features in the free tier are surprisingly powerful. Magic Write helps with scripting, while the design AI suggests layouts and color schemes for academic presentations.</p>
+                                        
+                                        <ul class="feature-list">
+                                            <li>AI-powered presentation design</li>
+                                            <li>Magic Write for script generation</li>
+                                            <li>Extensive academic templates</li>
+                                            <li>Collaboration features for group projects</li>
+                                        </ul>
+                                        
+                                        <div class="use-case">
+                                            <h4>🎨 Perfect For:</h4>
+                                            <p><strong>Group Presentations:</strong> Create a shared Canva folder with your team. Use Magic Write to generate talking points, then let each member design their slides with consistent branding.</p>
+                                        </div>
+                                        
+                                        <div class="rating">
+                                            <div class="rating-item">
+                                                <span>Ease of Use:</span>
+                                                <div class="stars">★★★★★</div>
+                                            </div>
+                                            <div class="rating-item">
+                                                <span>Professional Results:</span>
+                                                <div class="stars">★★★★☆</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <a href="https://www.canva.com" class="visit-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-external-link-alt"></i> Visit Canva
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="premium-pick">
+                                        <div class="tool-header">
+                                            <span class="tool-name">Sora + Runway ML</span>
+                                            <span class="badge paid-badge">PREMIUM</span>
+                                        </div>
+                                        <p><strong>Next-Gen Video Creation</strong></p>
+                                        <p>OpenAI's Sora represents the cutting edge of text-to-video generation, while Runway ML provides the tools to edit and refine AI-generated content into professional academic videos.</p>
+                                        
+                                        <ul class="feature-list">
+                                            <li>Text-to-video generation from descriptions</li>
+                                            <li>Advanced video editing and effects</li>
+                                            <li>Style transfer and motion control</li>
+                                            <li>Professional-grade output quality</li>
+                                        </ul>
+                                        
+                                        <div class="use-case">
+                                            <h4>🎬 Advanced Project:</h4>
+                                            <p><strong>Documentary-Style Assignment:</strong> "Create a 60-second video explaining quantum entanglement with visual metaphors, scientific accuracy, and engaging pacing" - Sora can generate the base footage while Runway helps refine it.</p>
+                                        </div>
+                                        
+                                        <div class="rating">
+                                            <div class="rating-item">
+                                                <span>Innovation:</span>
+                                                <div class="stars">★★★★★</div>
+                                            </div>
+                                            <div class="rating-item">
+                                                <span>Production Quality:</span>
+                                                <div class="stars">★★★★★</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <a href="https://openai.com/sora" class="visit-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-external-link-alt"></i> Learn About Sora
+                                        </a>
+                                        <a href="https://runwayml.com" class="visit-link" style="margin-left: 10px;" target="_blank" rel="noopener">
+                                            <i class="fas fa-external-link-alt"></i> Visit Runway ML
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exam Efficiency -->
+                    <div class="hack-category">
+                        <div class="category-header" onclick="toggleCategory('examCategory')">
+                            <h4 class="category-title">
+                                <i class="fas fa-brain"></i>
+                                Exam Efficiency & Study Optimization
+                                <i class="fas fa-chevron-down category-icon" id="examCategoryIcon"></i>
+                            </h4>
+                        </div>
+                        <div class="category-content" id="examCategory">
+                            <div class="hack-details">
+                                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 25px;">
+                                    Let's talk about optimizing your study efficiency. These tools help you study smarter, not harder, with AI-powered study aids that adapt to your learning style and exam requirements.
+                                </p>
+                                
+                                <div class="tool-comparison">
+                                    <div class="free-tier">
+                                        <div class="tool-header">
+                                            <span class="tool-name">Quizlet Free</span>
+                                            <span class="badge free-badge">FREE Tier</span>
+                                        </div>
+                                        <p><strong>AI-Powered Study Sets</strong></p>
+                                        <p>Quizlet's AI features help create study sets from your notes and textbooks, then adapt the difficulty based on your performance. The mobile app makes studying possible anywhere.</p>
+                                        
+                                        <ul class="feature-list">
+                                            <li>AI-generated flashcards from your materials</li>
+                                            <li>Adaptive learning based on performance</li>
+                                            <li>Multiple study modes (learn, write, spell, test)</li>
+                                            <li>Collaborative study sets for group revision</li>
+                                        </ul>
+                                        
+                                        <div class="use-case">
+                                            <h4>📖 Perfect For:</h4>
+                                            <p><strong>Last-Minute Revision:</strong> Upload your lecture notes and let Quizlet's AI create a customized study plan focusing on your weakest areas before the big exam.</p>
+                                        </div>
+                                        
+                                        <div class="rating">
+                                            <div class="rating-item">
+                                                <span>Study Efficiency:</span>
+                                                <div class="stars">★★★★☆</div>
+                                            </div>
+                                            <div class="rating-item">
+                                                <span>Mobile Accessibility:</span>
+                                                <div class="stars">★★★★★</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <a href="https://quizlet.com" class="visit-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-external-link-alt"></i> Visit Quizlet
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="premium-pick">
+                                        <div class="tool-header">
+                                            <span class="tool-name">ChatGPT Plus Mobile</span>
+                                            <span class="badge paid-badge">PREMIUM</span>
+                                        </div>
+                                        <p><strong>On-Demand Study Partner</strong></p>
+                                        <p>The ChatGPT mobile app with voice features acts as your personal tutor. Ask questions verbally during study sessions and get instant, comprehensive explanations.</p>
+                                        
+                                        <ul class="feature-list">
+                                            <li>Voice conversations for hands-free studying</li>
+                                            <li>Image upload for diagram analysis</li>
+                                            <li>Real-time problem-solving assistance</li>
+                                            <li>Custom instructions for personalized help</li>
+                                        </ul>
+                                        
+                                        <div class="use-case">
+                                            <h4>🎧 Study Session Hack:</h4>
+                                            <p><strong>Voice-Activated Learning:</strong> "Explain the Krebs cycle step by step as if I'm a beginner" while you're commuting or exercising. The voice feature makes learning possible during downtime.</p>
+                                        </div>
+                                        
+                                        <div class="rating">
+                                            <div class="rating-item">
+                                                <span>Accessibility:</span>
+                                                <div class="stars">★★★★★</div>
+                                            </div>
+                                            <div class="rating-item">
+                                                <span>Comprehensiveness:</span>
+                                                <div class="stars">★★★★★</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <a href="https://apps.apple.com/app/chatgpt/id6448311069" class="visit-link" target="_blank" rel="noopener">
+                                            <i class="fas fa-external-link-alt"></i> iOS App
+                                        </a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.openai.chatgpt" class="visit-link" style="margin-left: 10px;" target="_blank" rel="noopener">
+                                            <i class="fas fa-external-link-alt"></i> Android App
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 2px solid var(--light);">
+                    <h3 style="color: var(--secondary); margin-bottom: 15px;">Ready to Transform Your Academic Journey?</h3>
+                    <p style="font-size: 1.1rem; color: var(--text); max-width: 700px; margin: 0 auto;">
+                        These AI tools represent the cutting edge of educational technology. Remember - the goal isn't to replace learning, but to enhance it. Use these tools to understand concepts faster, work more efficiently, and achieve the academic results you deserve.
+                    </p>
+                    <p style="font-style: italic; margin-top: 20px; color: #7f8c8d;">
+                        Smart students work hard. Genius students work smart. Choose your tools wisely.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- AI Tools -->
     <section id="ai-tools">
         <div class="container">
@@ -2406,6 +3148,47 @@
         fadeElements.forEach(element => {
             appearOnScroll.observe(element);
         });
+        // Student Hacks Accordion Functionality
+const mainHacksAccordion = document.getElementById('mainHacksAccordion');
+const mainHacksContent = document.getElementById('mainHacksContent');
+const mainHacksIcon = document.getElementById('mainHacksIcon');
+
+if (mainHacksAccordion) {
+    mainHacksAccordion.addEventListener('click', function() {
+        const isExpanded = mainHacksContent.classList.contains('expanded');
+        
+        if (isExpanded) {
+            mainHacksContent.classList.remove('expanded');
+            mainHacksIcon.classList.remove('rotated');
+            // Close all sub-categories when main accordion closes
+            document.querySelectorAll('.category-content').forEach(content => {
+                content.classList.remove('expanded');
+            });
+            document.querySelectorAll('.category-icon').forEach(icon => {
+                icon.classList.remove('rotated');
+            });
+        } else {
+            mainHacksContent.classList.add('expanded');
+            mainHacksIcon.classList.add('rotated');
+        }
+    });
+}
+
+// Category toggle function
+function toggleCategory(categoryId) {
+    const content = document.getElementById(categoryId);
+    const icon = document.getElementById(categoryId + 'Icon');
+    
+    const isExpanded = content.classList.contains('expanded');
+    
+    if (isExpanded) {
+        content.classList.remove('expanded');
+        icon.classList.remove('rotated');
+    } else {
+        content.classList.add('expanded');
+        icon.classList.add('rotated');
+    }
+}
     </script>
 </body>
 </html>
