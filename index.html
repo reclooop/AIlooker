@@ -838,7 +838,28 @@
             background: var(--light);
             border-left: 3px solid var(--primary);
         }
+        /* Submenús del índice lateral */
+        .index-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 5px 0 5px 15px;
+            border-left: 2px solid var(--light);
+        }
 
+        .index-links ul li {
+            margin-bottom: 5px;
+        }
+
+        .index-links ul a {
+            font-size: 0.8rem !important;
+            padding: 4px 8px !important;
+            color: #666 !important;
+        }
+
+        .index-links ul a:hover {
+            color: var(--primary) !important;
+            background: var(--light) !important;
+        }
         /* Responsive - se oculta en móviles */
         @media (max-width: 1024px) {
             .sidebar-index {
