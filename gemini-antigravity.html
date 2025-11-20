@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Antigravity: AI Programming Revolution | AIlooker</title>
+    <meta name="description" content="Complete technical analysis of Gemini Antigravity - advanced code generation, architectural AI, and the future of software development.">
+    <link rel="canonical" href="https://aiusesinfo.com/gemini-antigravity.html" />
+    <meta name="google-site-verification" content="YG14bDdO7z5AIfCVcMjNBQdtFVwBL-gBDXJNCJ2-vmo" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRJ8XSQGHC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XRJ8XSQGHC');
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #34495e;
+            --accent: #e74c3c;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --text: #34495e;
+            --border: #bdc3c7;
+            --gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            --gradient2: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Cookie Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--dark);
+            color: white;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            display: none;
+        }
+        
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-text {
+            flex: 1;
+            margin-right: 20px;
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .cookie-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .accept-btn {
+            background: var(--success);
+            color: white;
+        }
+        
+        .reject-btn {
+            background: var(--accent);
+            color: white;
+        }
+        
+        /* Header */
+        header {
+            background: var(--gradient);
+            color: white;
+            padding: 60px 0 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+        
+        /* Article Content */
+        .article-content {
+            background: white;
+            border-radius: 15px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin: 40px 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .article-meta {
+            color: #7f8c8d;
+            font-size: 1rem;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .article-section {
+            margin-bottom: 50px;
+        }
+        
+        .article-section h2 {
+            color: var(--secondary);
+            font-size: 2rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary);
+        }
+        
+        .article-section h3 {
+            color: var(--secondary);
+            font-size: 1.5rem;
+            margin: 30px 0 20px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: var(--light);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .specs-table th {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .specs-table td {
+            padding: 15px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .specs-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .prompt-category {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+        
+        .prompt-item {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        /* Code Examples */
+        .code-example {
+            margin: 30px 0;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .code-block {
+            background: #1a202c;
+            color: #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .code-block pre {
+            margin: 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+        
+        .code-explanation {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--success);
+            font-size: 1rem;
+            margin-top: 15px;
+        }
+        
+        /* Future Grid */
+        .future-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .future-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary);
+        }
+        
+        .future-item h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            color: white;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #34495e;
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .article-content {
+                padding: 30px 20px;
+            }
+            
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-text {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>We use our own and third-party cookies to analyze traffic and personalize content. You can accept all cookies or reject their use. For more information, please read our <a href="cookie-policy.html" style="color: #3498db;">Cookie Policy</a>.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn reject-btn" id="rejectCookies">Reject</button>
+                <button class="cookie-btn accept-btn" id="acceptCookies">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Gemini Antigravity: AI Programming Revolution</h1>
+                <p class="tagline">Advanced Code Generation, Architectural AI, and the Future of Software Development</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Article Content -->
+        <div class="article-content">
+            <div class="article-meta">
+                <span><i class="fas fa-calendar"></i> January 29, 2025</span>
+                <span style="margin-left: 20px;"><i class="fas fa-clock"></i> 28 min read</span>
+                <span style="margin-left: 20px;"><i class="fas fa-user"></i> By AIlooker Research Team</span>
+            </div>
+
+            <!-- Introduction -->
+            <div class="article-section">
+                <p>Gemini Antigravity represents the pinnacle of AI-driven software engineering, transcending traditional code generation to deliver architectural-level intelligence that fundamentally redefines how complex systems are designed, implemented, and maintained. This comprehensive analysis examines the technical foundations, practical applications, and transformative potential of Google's most advanced programming AI.</p>
+
+                <p>Unlike conventional coding assistants that operate at the syntax level, Antigravity comprehends system architecture, scalability requirements, performance optimization, and security considerations simultaneously, enabling it to generate production-ready solutions for enterprise-scale challenges.</p>
+            </div>
+
+            <!-- Technical Architecture -->
+            <div class="article-section">
+                <h2>Technical Architecture & Capabilities</h2>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>🏗️ Architectural Intelligence</h3>
+                        <p>Antigravity processes software requirements through multi-layered analysis, understanding dependencies, scalability constraints, and integration points across the entire technology stack before generating coordinated solutions.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>🔗 Cross-Platform Synthesis</h3>
+                        <p>Generates harmonized code across multiple programming languages, frameworks, and deployment environments while maintaining consistency, performance optimization, and security standards.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>⚡ Performance Optimization</h3>
+                        <p>Incorporates advanced algorithms for automatic performance profiling, bottleneck identification, and optimization strategies tailored to specific use cases and scalability requirements.</p>
+                    </div>
+                </div>
+
+                <h3>Core Technical Specifications</h3>
+                <table class="specs-table">
+                    <thead>
+                        <tr>
+                            <th>Capability</th>
+                            <th>Specification</th>
+                            <th>Industry Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Architecture Comprehension</strong></td>
+                            <td>Multi-system dependency mapping</td>
+                            <td>Reduces design phase by 60-80%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Code Generation Scale</strong></td>
+                            <td>Enterprise-grade system architectures</td>
+                            <td>Enables rapid prototyping of complex systems</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Security Integration</strong></td>
+                            <td>Automated vulnerability assessment</td>
+                            <td>Proactive security-by-design implementation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Performance Analysis</strong></td>
+                            <td>Real-time optimization recommendations</td>
+                            <td>30-50% performance improvement in generated code</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Multi-language Support</strong></td>
+                            <td>15+ programming languages with framework integration</td>
+                            <td>Unified development across technology stacks</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Advanced Code Examples -->
+            <div class="article-section">
+                <h2>Enterprise-Grade Code Generation</h2>
+                
+                <div class="code-example">
+                    <h3>Microservices Architecture Generation</h3>
+                    <div class="code-block">
+                        <pre><code>// Generate complete microservices architecture for financial trading platform
+"Design a fault-tolerant microservices architecture for high-frequency trading handling 500,000 transactions/second. Requirements:
+- Real-time order matching engine with sub-millisecond latency
+- Risk management service with circuit breakers
+- Market data processing with WebSocket streaming
+- Portfolio management with real-time position tracking
+- Compliance monitoring with regulatory reporting
+- Database per service pattern with event sourcing
+Include: Docker configurations, Kubernetes manifests, API gateways, service mesh configuration, monitoring with Prometheus/Grafana, and disaster recovery protocols."</code></pre>
+                    </div>
+                    <div class="code-explanation">
+                        <strong>Output Architecture:</strong> Antigravity generates 12 coordinated microservices with complete infrastructure-as-code, including auto-scaling configurations, distributed tracing, and multi-region deployment strategies. The system includes built-in circuit breakers, retry mechanisms, and graceful degradation patterns.
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <h3>AI-Powered Data Engineering Pipeline</h3>
+                    <div class="code-block">
+                        <pre><code>// Create intelligent data pipeline for real-time analytics
+"Build a scalable data pipeline processing 10TB/day from IoT sensors with ML-powered anomaly detection. Architecture requirements:
+- Apache Kafka for real-time data ingestion
+- Spark Structured Streaming for data transformation
+- Feature store for ML model training
+- Real-time inference with TensorFlow Serving
+- Time-series database for historical analysis
+- Automated alerting system with dynamic thresholds
+- Data quality monitoring and validation
+Generate: Complete pipeline code, ML model training scripts, deployment configurations, and monitoring dashboards."</code></pre>
+                    </div>
+                    <div class="code-explanation">
+                        <strong>Output Implementation:</strong> End-to-end data pipeline with automated data quality checks, real-time feature engineering, model versioning, A/B testing framework, and comprehensive monitoring. Includes cost-optimized resource allocation and auto-scaling based on data volume patterns.
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <h3>Multi-Cloud Security Architecture</h3>
+                    <div class="code-block">
+                        <pre><code>// Design secure multi-cloud deployment for healthcare application
+"Create HIPAA-compliant multi-cloud architecture across AWS, GCP, and Azure for patient data processing. Security requirements:
+- End-to-end encryption for data at rest and in transit
+- Zero-trust network architecture
+- Automated compliance auditing
+- Identity and access management across clouds
+- Disaster recovery with 15-minute RTO
+- Automated security patch management
+Generate: Terraform modules for each cloud, security policies, compliance documentation, and incident response playbooks."</code></pre>
+                    </div>
+                    <div class="code-explanation">
+                        <strong>Output Security Framework:</strong> Comprehensive multi-cloud security architecture with automated compliance checks, encrypted cross-cloud communication, centralized identity management, and real-time security monitoring. Includes automated penetration testing scripts and security incident response automation.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Impact -->
+            <div class="article-section">
+                <h2>Transformative Impact on Software Engineering</h2>
+                
+                <div class="future-grid">
+                    <div class="future-item">
+                        <h4>🚀 Development Velocity Revolution</h4>
+                        <p>Enterprise software development timelines could compress from 12-18 months to 3-4 months as Antigravity automates architectural design, implementation, and deployment complexities while maintaining enterprise-grade quality standards.</p>
+                    </div>
+                    
+                    <div class="future-item">
+                        <h4>🎯 Democratized Architecture</h4>
+                        <p>Junior developers and domain experts can design and implement complex systems previously requiring senior architects, accelerating skill development and enabling faster innovation cycles across organizations.</p>
+                    </div>
+                    
+                    <div class="future-item">
+                        <h4>🔧 Enhanced Code Quality</h4>
+                        <p>Automated code generation with built-in best practices, security patterns, and performance optimization reduces technical debt and maintenance costs while improving system reliability and scalability.</p>
+                    </div>
+                </div>
+
+                <h3>Industry-Specific Transformations</h3>
+                
+                <div class="feature-card">
+                    <h4>🏦 Financial Services</h4>
+                    <p><strong>Impact:</strong> Rapid development of compliant financial systems with built-in regulatory reporting, risk management, and audit trails. Trading platforms can be prototyped and deployed in weeks rather than years.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>🏥 Healthcare Technology</h4>
+                    <p><strong>Impact:</strong> Accelerated development of HIPAA-compliant healthcare systems with integrated patient data security, interoperability standards, and clinical workflow optimization.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>🏭 Industrial IoT</h4>
+                    <p><strong>Impact:</strong> Rapid deployment of scalable IoT platforms with real-time analytics, predictive maintenance, and operational intelligence for manufacturing and logistics.</p>
+                </div>
+            </div>
+
+            <!-- Advanced Prompts -->
+            <div class="article-section">
+                <h2>Advanced Development Prompts</h2>
+                
+                <div class="prompt-category">
+                    <h3>Enterprise System Architecture</h3>
+                    
+                    <div class="prompt-item">
+                        <div class="prompt-text">"Design a global e-commerce platform serving 10 million users daily with peak capacity for 100,000 concurrent transactions. Include: multi-region deployment with active-active configuration, real-time inventory management, personalized recommendation engine, fraud detection system, and automated scaling based on traffic patterns. Generate complete microservices architecture, database schemas, caching strategy, and CDN configuration."</div>
+                        <div class="prompt-use"><strong>Use Case:</strong> Large-scale e-commerce, retail technology platforms</div>
+                    </div>
+                    
+                    <div class="prompt-item">
+                        <div class="prompt-text">"Create a blockchain-based supply chain tracking system with smart contracts for automated compliance, real-time shipment tracking, and immutable audit trails. Include: Hyperledger Fabric network configuration, IoT sensor integration, mobile applications for field agents, and regulatory reporting dashboard. Generate smart contract code, network configuration, and integration APIs."</div>
+                        <div class="prompt-use"><strong>Use Case:</strong> Supply chain management, logistics, compliance tracking</div>
+                    </div>
+                </div>
+
+                <div class="prompt-category">
+                    <h3>AI & Machine Learning Systems</h3>
+                    
+                    <div class="prompt-item">
+                        <div class="prompt-text">"Build an enterprise MLOps platform supporting 500 data scientists with automated model training, deployment, and monitoring at scale. Include: feature store with versioning, automated hyperparameter optimization, model serving with canary deployments, performance monitoring with automated drift detection, and cost-optimized resource allocation. Generate complete Kubernetes configurations, CI/CD pipelines, and monitoring dashboards."</div>
+                        <div class="prompt-use"><strong>Use Case:</strong> Enterprise AI/ML operations, data science platforms</div>
+                    </div>
+                    
+                    <div class="prompt-item">
+                        <div class="prompt-text">"Design a real-time computer vision system for manufacturing quality control processing 1,000 images per second with 99.9% accuracy. Include: distributed inference architecture, model retraining pipeline with active learning, anomaly detection for defect classification, and integration with production line control systems. Generate complete system architecture, model training code, and deployment scripts."</div>
+                        <div class="prompt-use"><strong>Use Case:</strong> Industrial automation, quality control, computer vision applications</div>
+                    </div>
+                </div>
+
+                <div class="prompt-category">
+                    <h3>Security & Compliance</h3>
+                    
+                    <div class="prompt-item">
+                        <div class="prompt-text">"Create a zero-trust security architecture for a distributed financial application with real-time threat detection and automated incident response. Include: micro-segmentation policies, behavioral analytics for anomaly detection, automated security patch management, and compliance reporting for SOX, GDPR, and PCI-DSS. Generate security policies, monitoring rules, and incident response automation."</div>
+                        <div class="prompt-use"><strong>Use Case:</strong> Financial security, compliance-driven applications</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Implementation Strategy -->
+            <div class="article-section">
+                <h2>Enterprise Implementation Framework</h2>
+                
+                <div class="feature-card">
+                    <h4>📅 90-Day Adoption Roadmap</h4>
+                    <p><strong>Weeks 1-4:</strong> Pilot integration with existing CI/CD pipelines for automated code review and architectural validation of new features.</p>
+                    <p><strong>Weeks 5-8:</strong> Expand to greenfield project development, using Antigravity for rapid prototyping and MVP development.</p>
+                    <p><strong>Weeks 9-12:</strong> Full enterprise integration with customized prompts for domain-specific architectures and compliance requirements.</p>
+                </div>
+
+                <h3>Team Skill Development</h3>
+                <p>Successful Antigravity implementation requires shifting developer focus from implementation details to architectural thinking, system design, and prompt engineering. Training should emphasize:</p>
+                
+                <ul>
+                    <li><strong>Architectural Pattern Recognition:</strong> Understanding when to apply specific patterns and anti-patterns</li>
+                    <li><strong>Prompt Engineering Excellence:</strong> Crafting precise requirements for optimal code generation</li>
+                    <li><strong>Quality Assurance:</strong> Developing robust testing strategies for AI-generated code</li>
+                    <li><strong>System Integration:</strong> Ensuring seamless integration with existing enterprise systems</li>
+                </ul>
+            </div>
+
+            <!-- Conclusion -->
+            <div class="article-section">
+                <h2>Conclusion: The Future of Software Engineering</h2>
+                
+                <p>Gemini Antigravity represents not merely an incremental improvement in developer tools but a fundamental paradigm shift in how software is conceived, designed, and implemented. By automating complex architectural decisions and implementation details, it enables organizations to focus on innovation, user experience, and business value rather than technical implementation complexities.</p>
+
+                <p>The most successful organizations will be those that embrace this transformation, retraining developers for higher-level architectural thinking and strategic system design while leveraging Antigravity's capabilities to accelerate development velocity and improve software quality.</p>
+
+                <div class="feature-card">
+                    <h4>🔮 Strategic Recommendations</h4>
+                    <p><strong>For CTOs:</strong> Begin with pilot projects to measure impact on development velocity and code quality, then scale based on demonstrated ROI.</p>
+                    <p><strong>For Development Teams:</strong> Invest in prompt engineering skills and architectural thinking to maximize Antigravity's potential.</p>
+                    <p><strong>For Organizations:</strong> Develop customized prompt libraries for domain-specific challenges and compliance requirements.</p>
+                </div>
+
+                <p>As Antigravity and similar technologies mature, the distinction between human and AI-generated code will blur, creating new opportunities for innovation while demanding new skills and approaches from software engineering teams. The future belongs to organizations that can effectively integrate human creativity with AI-powered execution.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>AIlooker</h3>
+                    <p>Advanced AI analysis and technical insights for enterprise technology leaders.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gemini-3-pro.html">Gemini 3 Pro Analysis</a></li>
+                        <li><a href="index.html#ai-tools">AI Tools Directory</a></li>
+                        <li><a href="index.html#comparisons">Technical Comparisons</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 AIlooker. All rights reserved.</p>
+                <p>This site uses cookies to improve user experience. By continuing to browse, you accept our <a href="cookie-policy.html" style="color: #3498db;">Cookie Policy</a>.</p>
+                <p>Disclaimer: The information provided on this site is for educational and informational purposes only. We are not affiliated with the mentioned companies.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function confirmRedirect(url, toolName) {
+            if (confirm(`You are about to visit the official ${toolName} website.\n\nThis will open in a new tab.\n\nClick OK to continue or Cancel to stay on this page.`)) {
+                window.open(url, '_blank', 'noopener,noreferrer');
+            }
+        }
+
+        // Cookie Management
+        let cookiesAccepted = null;
+
+        // Show cookie banner after 2 seconds
+        setTimeout(() => {
+            const cookiePreference = localStorage.getItem('cookiesAccepted');
+            if (cookiePreference === null) {
+                document.getElementById('cookieBanner').style.display = 'block';
+            } else {
+                cookiesAccepted = cookiePreference === 'true';
+                if (cookiesAccepted) {
+                    loadTrackingScripts();
+                }
+            }
+        }, 2000);
+
+        // Handle cookie acceptance
+        document.getElementById('acceptCookies').addEventListener('click', function() {
+            document.getElementById('cookieBanner').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookiesAccepted = true;
+            loadTrackingScripts();
+        });
+
+        // Handle cookie rejection
+        document.getElementById('rejectCookies').addEventListener('click', function() {
+            document.getElementById('cookieBanner').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'false');
+            cookiesAccepted = false;
+            removeTrackingScripts();
+        });
+
+        // Function to remove tracking scripts
+        function removeTrackingScripts() {
+            const gaScripts = document.querySelectorAll('script[src*="googletagmanager"]');
+            gaScripts.forEach(script => script.remove());
+            
+            const adsenseScripts = document.querySelectorAll('script[src*="adsbygoogle"]');
+            adsenseScripts.forEach(script => script.remove());
+            
+            if (window.dataLayer) {
+                window.dataLayer = [];
+            }
+        }
+
+        // Check existing preference on page load
+        const existingPreference = localStorage.getItem('cookiesAccepted');
+        if (existingPreference === 'true') {
+            cookiesAccepted = true;
+            loadTrackingScripts();
+        } else if (existingPreference === 'false') {
+            cookiesAccepted = false;
+        }
+        
+        // Function to load tracking scripts (Google Analytics and AdSense)
+        function loadTrackingScripts() {
+            if (!cookiesAccepted) return;
+            
+            // Google AdSense (cuando tengas tu ID)
+            const adsenseScript = document.createElement('script');
+            adsenseScript.async = true;
+            adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-TU_ID_DE_ADSENSE';
+            adsenseScript.crossOrigin = 'anonymous';
+            document.head.appendChild(adsenseScript);
+        }
+    </script>
+</body>
+</html>
