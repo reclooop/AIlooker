@@ -324,7 +324,69 @@
             color: #95a5a6;
             font-size: 0.9rem;
         }
-        
+        /* Comparison Bars */
+        .comparison-bars {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin: 40px 0;
+        }
+
+        .comparison-bars h3 {
+            color: var(--secondary);
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .bar-item {
+            margin-bottom: 25px;
+        }
+
+        .bar-label {
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .bar-container {
+            display: flex;
+            height: 35px;
+            background: var(--light);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .gemini-bar {
+            background: linear-gradient(90deg, #4285f4, #34a853);
+            margin-right: 2px;
+        }
+
+        .chatgpt-bar {
+            background: linear-gradient(90deg, #74aa9c, #10a37f);
+            margin-left: 2px;
+        }
+
+        .bar:hover {
+            transform: scaleY(1.1);
+            z-index: 2;
+        }
+        /* Responsive */
         @media (max-width: 768px) {
             .comparison-grid {
                 grid-template-columns: 1fr;
@@ -346,6 +408,13 @@
             .cookie-text {
                 margin-right: 0;
                 margin-bottom: 15px;
+            }
+            .comparison-bars {
+                padding: 20px;
+            }
+            
+            .bar {
+                font-size: 0.8rem;
             }
         }
     </style>
